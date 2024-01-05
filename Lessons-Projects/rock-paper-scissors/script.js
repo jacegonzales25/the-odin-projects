@@ -1,4 +1,5 @@
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection, scores) {
+  console.log(scores.playerScore, scores.computerScore);
   if (playerSelection === computerSelection) {
     console.log("Tie: " + playerSelection + " " + computerSelection);
   } else if (playerSelection === "rock" && computerSelection === "paper") {
@@ -8,6 +9,7 @@ function playRound(playerSelection, computerSelection) {
         " vs computer choice: " +
         computerSelection
     );
+    scores.computerScore += 1;
   } else if (playerSelection === "rock" && computerSelection === "scissors") {
     console.log(
       "You win! Your choice was: " +
@@ -15,6 +17,7 @@ function playRound(playerSelection, computerSelection) {
         " vs computer choice: " +
         computerSelection
     );
+    scores.playerScore += 1;
   } else if (playerSelection === "paper" && computerSelection === "rock") {
     console.log(
       "You win! Your choice was: " +
@@ -22,6 +25,7 @@ function playRound(playerSelection, computerSelection) {
         " vs computer choice: " +
         computerSelection
     );
+    scores.playerScore += 1;
   } else if (playerSelection === "paper" && computerSelection === "scissors") {
     console.log(
       "You lost! Your choice was: " +
@@ -29,6 +33,7 @@ function playRound(playerSelection, computerSelection) {
         " vs computer choice: " +
         computerSelection
     );
+    scores.computerScore += 1;
   } else if (playerSelection === "scissors" && computerSelection === "rock") {
     console.log(
       "You lost! Your choice was: " +
@@ -36,6 +41,7 @@ function playRound(playerSelection, computerSelection) {
         " vs computer choice: " +
         computerSelection
     );
+    scores.computerScore++;
   } else if (playerSelection === "scissors" && computerSelection === "paper") {
     console.log(
       "You win! Your choice was: " +
@@ -43,6 +49,7 @@ function playRound(playerSelection, computerSelection) {
         " vs computer choice: " +
         computerSelection
     );
+    scores.playerScore += 1;
   }
   console.log(playerSelection, computerSelection);
 }
@@ -92,12 +99,27 @@ function getPlayerChoice() {
   return playerChoice;
 }
 
+function determineWinner(scores) {
+    if (scores.playerScore > scores.computerScore) {
+        console.log("You won! Your score: " + scores.playerScore + " computer score: " + scores.computerScore);
+    } else {
+        console.log("You lost! Your score: " + scores.playerScore + " computer score: " + scores.computerScore)
+    }
+}
+
 const choices = ["rock", "paper", "scissors"];
-let playerScore = 0;
-let computerScore = 0;
+let scores = { playerScore: 0, computerScore: 0 };
 
-const computerSelection = getComputerChoice();
+for (let i = 0; i < 5; i++) {
+  const computerSelection = getComputerChoice();
+  const playerSelection = getPlayerChoice();
 
-const playerSelection = getPlayerChoice();
+  playRound(playerSelection, computerSelection, scores)
 
-playRound(playerSelection, computerSelection);
+  console.log(scores.playerScore, scores.computerScore);
+
+}
+
+determineWinner(scores);
+
+
