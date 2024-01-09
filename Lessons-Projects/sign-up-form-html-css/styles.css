@@ -1,3 +1,4 @@
+
 html body {
     margin: 0;
     padding: 0;
@@ -18,10 +19,22 @@ body {
     background-image: url(./assets/halie-west.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 30%;
+    width: 40%;
     height: 100vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
+.copyright-container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin-top: auto;
+    
+}
 p.copyright {
     color: #FFF6F6;
     font-size: 16px;
@@ -38,8 +51,89 @@ p.copyright a {
     width: 100%;
     height: 20vh;
     opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    
 }
 
-.black-div .logo {
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.logo-container .logo {
     height: 15vh
 }
+
+.logo-container .odin {
+    color: #FFF6F6;
+}
+
+.main {
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .main .form-container {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main .form-container .legend {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    margin-left: 40px;
+  }
+  
+  .main .form-container .columns {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 40px;
+  }
+  
+  .main .form-container .col-1,
+  .main .form-container .col-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 50%;
+  }
+  
+  .main .top-container,
+  .main .bottom-container {
+    margin-top: 30px;
+    margin-left: 40px;
+    height: 33vh;
+  }
+
+
+.header {
+  font-family: 'Courier New', Courier, monospace;
+  scroll-margin-bottom: 10px;
+  padding-bottom: 2px;
+  font-size: 2rem;
+  font-weight: 600; 
+  letter-spacing: -0.02em; 
+  margin-top: 0;
+}
+
+.header-sub {
+    font-family: 'Courier New', Courier, monospace;
+    scroll-margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+

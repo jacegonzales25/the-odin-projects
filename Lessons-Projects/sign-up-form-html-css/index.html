@@ -11,44 +11,61 @@
   <body>
     <div class="flex-container">
       <div class="side-nav">
-        <div class="black-div">
-            <img src="./assets/odin-lined.png" alt="odin-logo.png" class="logo">
-            <h1 class="odin">ODIN</h1>
+        <div class="logo-container">
+          <img src="./assets/odin-lined.png" alt="odin-logo.png" class="logo">
+          <h1 class="odin">ODIN</h1>
         </div>
-        <p class="copyright">Photo by <em><a href="/" class="copyright">Hailie West</a></em> on <em><a href="/" class="copyright">Unsplash</em></a></p>
+        <div class="black-div">
+            
+        </div>
+        <div class="copyright-container">
+          <p class="copyright">Photo by <em><a href="/" class="copyright">Hailie West</a></em> on <em><a href="/" class="copyright">Unsplash</em></a></p>
+        </div>
+        
       </div>
       <div class="main">
+        <div class="top-container">
+
         <h2 class="header">
           This is not a real online service! You know you need something like
           this in your life to help you realize your deepest dreams.
-        </h2>
-        <h2 class="header">
+          <br>
           Sign up <span class="italic">now</span> to get started
         </h2>
-        <h2 class="header-sub">You <span>know</span> you want to.</h2>
+        <h2 class="header-sub">You <em>know </em>you want to.</h2>
+      </div>
         <form action="/" method="post">
           <div class="form-container">
-            <legend>Let<span>'</span>s do this!</legend>
-
+            <div class="legend"><legend>Let<span>'</span>s do this!</legend></div>
+            
+            <div class="columns">
             <div class="col-1">
-              <label for="firstName">FIRST NAME</label>
+              <label for="firstName" class="label">FIRST NAME</label>
               <input type="text" name="firstName" placeholder="John" />
-              <label for="email">EMAIL</label>
+              <label for="email" class="label">EMAIL</label>
               <input type="email" name="email" placeholder="john@example.com" />
-              <label for="password">PASSWORD</label>
+              <label for="password" class="label">PASSWORD</label>
               <input type="password" name="password" placeholder="***" />
             </div>
-            <label for="lastName">FIRST NAME</label>
-            <input type="text" name="lastName" placeholder="Doe" />
-            <label for="phoneNumber">PHONE NUMBER</label>
-            <input type="number" name="phoneNumber" placeholder="(+63)" />
-            <label for="confirmPassword">CONFIRM PASSWORD</label>
-            <input type="password" name="confirmPassword" placeholder="***" />
-            <div class="col-2"></div>
+            
+            <div class="col-2">
+              <label for="lastName" class="label">LAST NAME</label>
+              <input type="text" name="lastName" placeholder="Doe" />
+              <label for="phoneNumber" class="label">PHONE NUMBER</label>
+              <input type="number" name="phoneNumber" placeholder="(+63)" />
+              <label for="confirmPassword" class="label">CONFIRM PASSWORD</label>
+              <input type="password" name="confirmPassword" placeholder="***" /></div>
+            </div>
           </div>
-          <button type="submit">Create Account</button>
+          <div class="bottom-container">
+        
+            <button type="submit">Create Account</button>
+         
+            <h3>Already have an account? <a href="/">Log in</a></h3>
+          </div>
         </form>
-        <h3>Already have an account? <a href="/">Log in</a></h3>
+        
+        
       </div>
     </div>
 
